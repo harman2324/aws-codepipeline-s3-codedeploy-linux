@@ -1,85 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Group 2 Application Update</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
   box-sizing: border-box;
 }
-.menu {
-  float: left;
-  width: 20%;
-}
-.menuitem {
-  padding: 8px;
-  margin-top: 7px;
-  border-bottom: 1px solid #f1f1f1;
-}
-.main {
-  float: left;
-  width: 60%;
-  padding: 0 20px;
-  overflow: hidden;
-}
-.right {
-  background-color: lightblue;
-  float: left;
-  width: 20%;
-  padding: 10px 15px;
-  margin-top: 7px;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@media only screen and (max-width:800px) {
-  /* For tablets: */
-  .main {
-    width: 80%;
-    padding: 0;
-  }
-  .right {
-    width: 100%;
-  }
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
 }
-@media only screen and (max-width:500px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
     width: 100%;
+    height: auto;
   }
 }
 </style>
 </head>
-<body style="font-family:Verdana;">
+<body>
 
-<div style="background-color:#f1f1f1;padding:15px;">
-  <h1>Group 2 Vacation!</h1>
-  <h3>Helllllo world and thanks Professor!</h3>
-</div>
+<h2>USF Overview from Group 2</h2>
+<p>The MSIS program’s curriculum is based on nationally approved curriculum recommendations from the Association for Information Systems (AIS) and the Association for Computing Machinery (ACM). It is frequently updated to give USF students a competitive edge for employment.</p>
+<p>The MSIS curriculum analyzes how systems and technologies are implemented. This includes information security, project planning, scheduling, budgeting, and change management.</p>
 
-<div style="overflow:auto">
-  <div class="menu">
-    <div class="menuitem">The Walk</div>
-    <div class="menuitem">Transport</div>
-    <div class="menuitem">Experience</div>
-    <div class="menuitem">Gallery</div>
-  </div>
+<header>
+  <h2>USF MSIS</h2>
+</header>
 
-  <div class="main">
-    <h2>The Walk</h2>
-    <p>The walk across The City will take you approximately two hours, give or take an hour depending on the weather conditions and your physical shape.</p>
-    <img src="https://myusf.usfca.edu/sites/default/files/images/campus/small/ariel-campus-3-small.jpg style="width:100%">
-  </div>
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Overview</a></li>
+      <li><a href="#">Academics</a></li>
+      <li><a href="#">Cost</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>MSIS with real world work!</h1>
+    <p>Take relevent courses that you can apply to your real career. Assess the need of organizations to integrate disparate internal systems and create effective communication channels with external parties such as suppliers and customers.</p>
+    <p>Learn Use information technology to foster sound financial systems and create effective organizational structures to better manage an organization's human capital.</p>
+    <p><img src="https://az589735.vo.msecnd.net/images/profilepics/1023240/106.jpg" alt="Italian Trulli"></p>
+  </article>
+</section>
 
-  <div class="right">
-    <h2>What?</h2>
-    <p>We visited many places such as bars and breweries and clubs.</p>
-    <h2>Where?</h2>
-    <p>Right in downtown San Fran!.</p>
-    <h2>Price?</h2>
-    <p>Professor made for it all!</p>
-  </div>
-</div>
-
-
-<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> This is GROUP 2.</div>
+<footer>
+  <p>Footer</p>
+</footer>
 
 </body>
 </html>
